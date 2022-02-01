@@ -1,0 +1,13 @@
+{% extends "layout.html" %} 
+
+{% block content %}
+<h1>Orders</h1>
+
+<table class="ui striped table">
+    {% for order in orders %}
+  <tr>
+    <td>{{ order }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %} 
+
+{% block content %}
+<h1><a href="/">STOCKS</a>
+    <i class="chevron right icon"></i>
+    {{ strategy.name }}
+</h1>
+    <table class="ui striped table">
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for selected in selecteds %}
+          <tr>
+            <td>{{ selected.symbol }}</td>
+            <td>{{ selected.name }}</td>
+          </tr>
+            {% endfor %}
+        </tbody>
+     </table>
+{% endblock %}
